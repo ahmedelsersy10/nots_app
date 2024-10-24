@@ -58,7 +58,7 @@ class NotseItem extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

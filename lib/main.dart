@@ -7,10 +7,10 @@ void main() {
 
 class NotsApp extends StatelessWidget {
   const NotsApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark),
       home: const NotsView(),
     );

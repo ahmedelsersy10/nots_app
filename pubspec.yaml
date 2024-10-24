@@ -30,10 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  font_awesome_flutter: ^10.7.0
+  cupertino_icons: ^1.0.8
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -43,7 +43,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/scholar.png"
+  image_path: "assets/images/download.jpeg"
   remove_alpha_ios: true
   remove_alpha_android: true
   # The "flutter_lints" package below contains a set of recommended lints to

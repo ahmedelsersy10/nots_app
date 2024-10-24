@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nots_app/views/widgets/custom_app_bar.dart';
+import 'package:nots_app/views/widgets/notse_item.dart';
 
 class NotsViewBody extends StatelessWidget {
   const NotsViewBody({super.key});
@@ -11,6 +12,10 @@ class NotsViewBody extends StatelessWidget {
       child: Column(
         children: [
           CustomAppBar(),
+          SizedBox(
+            height: 30,
+          ),
+          NotseItem(),
         ],
       ),
     );

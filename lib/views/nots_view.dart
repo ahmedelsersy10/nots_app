@@ -6,8 +6,20 @@ class NotsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: NotsViewBody(),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right: 10, bottom: 10),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(
+            Icons.add,
+            color: Colors.black,
+            size: 28,
+          ),
+          backgroundColor: const Color.fromARGB(255, 10, 208, 171),
+        ),
+      ),
     );
   }
 }

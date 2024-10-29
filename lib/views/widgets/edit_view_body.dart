@@ -25,14 +25,14 @@ class EditNote extends StatelessWidget {
             ),
             CustomTextField(
               labelText: 'Title',
-              contentPadding: EdgeInsets.only(top: 50, left: 16),
+              maxLines: 2,
             ),
             SizedBox(
               height: 20,
             ),
             CustomTextField(
               labelText: 'Content',
-              contentPadding: EdgeInsets.only(top: 80, bottom: 80, left: 16),
+              maxLines: 6,
             ),
           ],
         ),

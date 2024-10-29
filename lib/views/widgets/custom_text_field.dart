@@ -7,17 +7,17 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     Key? key,
     required this.labelText,
-    required this.contentPadding,
+    this.maxLines = 1,
   }) : super(key: key);
 
   final String labelText;
-  final dynamic contentPadding;
+  final int maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
       decoration: InputDecoration(
-        contentPadding: contentPadding,
         labelText: labelText,
         labelStyle: const TextStyle(
           color: KPrimaryColor,

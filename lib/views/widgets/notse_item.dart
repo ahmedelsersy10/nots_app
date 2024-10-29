@@ -12,7 +12,7 @@ class NotseItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return EditNote();
+          return const EditNote();
         }));
       },
       child: Container(

@@ -4,7 +4,7 @@ import 'package:nots_app/views/widgets/custom_icon_button.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.text, required this.icons});
   final String text;
-  final dynamic icons;
+  final IconData icons;
   @override
   Widget build(BuildContext context) {
     return Row(

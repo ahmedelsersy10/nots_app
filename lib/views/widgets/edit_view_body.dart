@@ -11,14 +11,14 @@ class EditNote extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.only(
           top: 50,
-          left: 16,
-          right: 16,
+          left: 18,
+          right: 18,
         ),
         child: Column(
           children: [
             CustomAppBar(
               text: 'Edit Note',
-              icons: Icons.phone,
+              icons: Icons.check,
             ),
             SizedBox(
               height: 30,

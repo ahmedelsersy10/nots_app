@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nots_app/views/edit_note.dart';
+import 'package:nots_app/views/widgets/edit_view_body.dart';
 
 class NotseItem extends StatelessWidget {
   const NotseItem({

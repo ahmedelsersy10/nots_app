@@ -4,30 +4,18 @@ import 'package:nots_app/consants.dart';
 // ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
   // ignore: non_constant_identifier_names
-  CustomTextField({
+  const CustomTextField({
     Key? key,
     required this.labelText,
-    this.onChanged,
-    this.obscureText = false,
-    this.contentPadding,
+    required this.contentPadding,
   }) : super(key: key);
 
   final String labelText;
-  Function(String)? onChanged;
-  final bool obscureText;
   final dynamic contentPadding;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText,
-      validator: (data) {
-        if (data!.isEmpty) {
-          return ' value is wrong';
-        }
-        return null;
-      },
-      onChanged: onChanged,
       decoration: InputDecoration(
         contentPadding: contentPadding,
         labelText: labelText,

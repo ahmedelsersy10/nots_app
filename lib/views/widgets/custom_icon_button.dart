@@ -16,7 +16,7 @@ class CustomIconButton extends StatelessWidget {
             color: Colors.grey[850], // لون الخلفية الداكنة
             borderRadius: BorderRadius.circular(16) // شكل دائري
             ),
-        child: Icon(
+        child: const Icon(
           Icons.search,
           size: 33,
           color: Colors.white,

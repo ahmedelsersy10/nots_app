@@ -11,7 +11,13 @@ class NotsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poppins',
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          sizeConstraints: BoxConstraints.tightFor(height: 70, width: 70),
+        ),
+      ),
       home: const NotsView(),
     );
   }

@@ -7,8 +7,8 @@ class NotsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
+    return const Padding(
+      padding: EdgeInsets.only(
         top: 50,
         left: 16,
         right: 16,

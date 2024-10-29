@@ -9,10 +9,10 @@ class NotseItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffFFCC80),
+        color: const Color(0xffFFCC80),
         borderRadius: BorderRadius.circular(16),
       ),
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: 20,
         left: 16,
         bottom: 20,
@@ -21,7 +21,7 @@ class NotseItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text(
+            title: const Text(
               'Fluttsr Tips',
               style: TextStyle(
                   color: Colors.black,
@@ -43,7 +43,7 @@ class NotseItem extends StatelessWidget {
             ),
             trailing: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
                 size: 26,

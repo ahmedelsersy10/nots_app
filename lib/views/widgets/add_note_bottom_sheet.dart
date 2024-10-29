@@ -7,32 +7,67 @@ class AddNoteBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30),
       child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            const CustomTextField(
-              labelText: 'Title',
-              maxLines: 2,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const CustomTextField(
-              labelText: 'Content',
-              maxLines: 6,
-            ),
-            const SizedBox(
-              height: 120,
-            ),
-            CustomButton(() {}, text: 'Add'),
-            const SizedBox(
-              height: 8,
-            ),
-          ],
-        ),
+        child: AddNoteForm(),
+      ),
+    );
+  }
+}
+
+class AddNoteForm extends StatefulWidget {
+  const AddNoteForm({
+    super.key,
+  });
+  @override
+  State<AddNoteForm> createState() => _AddNoteFormState();
+}
+
+class _AddNoteFormState extends State<AddNoteForm> {
+  final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  String? title, content;
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: formKey,
+      autovalidateMode: autovalidateMode,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          CustomTextField(
+            onSaved: (value) {
+              title = value;
+            },
+            labelText: 'Title',
+            maxLines: 2,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomTextField(
+            onSaved: (value) {
+              content = value;
+            },
+            labelText: 'Content',
+            maxLines: 6,
+          ),
+          const SizedBox(
+            height: 120,
+          ),
+          CustomButton(() {
+            if (formKey.currentState!.validate()) {
+              formKey.currentState!.save();
+            } else {
+              autovalidateMode = AutovalidateMode.always;
+              setState(() {});
+            }
+          }, text: 'Add'),
+          const SizedBox(
+            height: 8,
+          ),
+        ],
       ),
     );
   }

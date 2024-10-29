@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:nots_app/consants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton(this.onPressed, {Key? key, required this.text})
-      : super(key: key);
-  final VoidCallback onPressed;
+  const CustomButton(
+    this.onPressed, {
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+  final void Function()? onPressed;
   final String text;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

@@ -15,7 +15,10 @@ class NotsViewBody extends StatelessWidget {
       ),
       child: Column(
         children: [
-          CustomAppBar(),
+          CustomAppBar(
+            text: 'Notes',
+            icons: Icons.search,
+          ),
           Expanded(
             child: NotseListView(),
           ),

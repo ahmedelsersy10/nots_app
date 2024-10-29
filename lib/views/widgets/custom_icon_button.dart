@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     super.key,
+    required this.icon,
   });
-
+  final dynamic icon;
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -16,8 +17,8 @@ class CustomIconButton extends StatelessWidget {
             color: Colors.grey[850], // لون الخلفية الداكنة
             borderRadius: BorderRadius.circular(16) // شكل دائري
             ),
-        child: const Icon(
-          Icons.search,
+        child: Icon(
+          icon,
           size: 33,
           color: Colors.white,
         ),
